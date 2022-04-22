@@ -11523,14 +11523,15 @@ html {
   padding: 15px;
   border-radius: 15px;
   margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 1.25rem;
   color: #FFF;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  
 }
 .bar::before{
   content:  attr(data-skill);
-  background-color: #f3b0ff;
+  background-color: #606668;
   display: inline-block;
   padding: 5px 0 5px 10px;
   border-radius: inherit;
@@ -11541,10 +11542,10 @@ html {
 }
 
 .bar.front::before{
-  background-color: #ffcc33;
+  background-color: #606668;
 }
 .bar.back::before{
-  background-color: #a6cfe3;
+  background-color: #606668;
 }
 
 .bar.learning::before{
@@ -11572,8 +11573,8 @@ html {
 
 
 #preloader{
-  background: #fff url(/assets/loaded.gif) no-repeat center center;
-  background-size: 10%;
+  background: #000000 url(/assets/loaded.gif) no-repeat center center;
+  background-size: 15%;
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -12201,4 +12202,145 @@ html {
   color: #fff;
   background-color: #ffffff00;
   border-color: #f8f9fa;
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.main-container {
+  padding: 30px;
+}
+
+/* HEADING */
+
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  font-weight: 600;
+}
+
+.heading__credits {
+  margin: 10px 0px;
+  color: #888888;
+  font-size: 25px;
+  transition: all 0.5s;
+}
+
+.heading__link {
+  text-decoration: none;
+}
+
+.heading__credits .heading__link {
+  color: inherit;
+}
+
+/* CARDS */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+
+.card__link,
+.card__exit,
+.card__icon {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__link::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+
+.card__link:hover::after {
+  width: 100%;
+}
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
+}
+
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
+}
+
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+/* CARD BACKGROUNDS */
+
+.card-1 {
+  background: radial-gradient(#000000, #1c2022);
+}
+
+.card-2 {
+  background: radial-gradient(#000000, #1c2022);
+}
+
+.card-3 {
+  background: radial-gradient(#000000, #1c2022);
+}
+
+.card-4 {
+  background: radial-gradient(#000000, #1c2022);
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
 }
