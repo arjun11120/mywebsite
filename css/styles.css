@@ -11538,10 +11538,10 @@ html {
 }
 
 .bar.front::before{
-  background-color: #606668;
+  background-color: radial-gradient(#000000, #1c2022);
 }
 .bar.back::before{
-  background-color: #606668;
+  background-color: radial-gradient(#000000, #1c2022);
 }
 
 .bar.learning::before{
@@ -12352,4 +12352,7 @@ body {
 }
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #f8f9fa;
+}
+.icon{
+  color: white;
 }
