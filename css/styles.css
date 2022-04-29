@@ -11527,7 +11527,7 @@ html {
 }
 .bar::before{
   content:  attr(data-skill);
-  background-color: #606668;
+  background-color: #232528;
   display: inline-block;
   padding: 5px 0 5px 10px;
   border-radius: inherit;
